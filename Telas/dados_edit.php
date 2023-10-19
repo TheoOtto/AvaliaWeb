@@ -23,8 +23,6 @@
                     $telefone =$dados['telefone'];
                     $sexo = $dados['sexo'];
                     $data_nasc = $dados['data_nasc'];
-                    $estado = $dados['estado'];
-                    $cidade = $dados['cidade'];
 
                 }
 
@@ -52,9 +50,8 @@
 <body>
     <div class="box">
         <form action="../Processos/saveEdit.php" method="POST">
-            <fieldset>
                 <legend><b>Cadastro</b></legend>
-                <br>
+                <br><br>
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" autocomplete="off" value="<?php echo $nome;?>" required> 
                     <label for="nome" class="labelInput">Nome Completo</label>
@@ -89,21 +86,10 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="estado" id="estado" class="inputUser" autocomplete="off" value="<?php echo $estado;?>" required> 
-                    <label for="estado" class="labelInput">Estado</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" autocomplete="off" value="<?php echo $cidade;?>" required> 
-                    <label for="cidade" class="labelInput">Cidade</label>
-                </div>
-                <br>
-                <div class="inputBox">
                     <p><a href="dados_conta.php" class="href">Voltar para seus dados</p></a>
                 </div>
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <input type="submit" name="update" id="update">
-            </fieldset>
         </form>
     </div>
 </body>

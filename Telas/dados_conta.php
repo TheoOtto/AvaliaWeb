@@ -40,14 +40,13 @@ include_once('../Classes/User.php');
         </div>
         <ul class="nav-list">
           <li><a href="tela_home.php">Início</a></li>
+          <li><a href="tela_post.php">Postar</a></li>
+          <li><a href="../Processos/sair.php">Sair</a></li>
+          <li><a href="confirma_Delet.html">Deletar</a></li>
         </ul>
-        <div class="d-flex">
-            <a href="../Processos/sair.php" class="linkes">Sair</a>
-            <a href="confirma_Delet.html">Deletar</a>
-        </div>  
       </nav>
       <div class="titulo">
-        <p>Dados atuais</p>
+        <p>Perfil</p>
       </div>
     </header>
 
@@ -62,8 +61,6 @@ include_once('../Classes/User.php');
             <th scope="col">Telefone</th>
             <th scope="col">Sexo</th>
             <th scope="col">Data de Nascimento</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Cidade</th>
             <th scope="col">...</th>       
           </tr>
         </thead>
@@ -75,6 +72,8 @@ include_once('../Classes/User.php');
         </tbody>
       </table>
     </div>
-    <script src="mobile-navbar.js"></script>
+
+
+    <script src="../Processos/mobile-navbar.js"></script>
   </body>
 </html>

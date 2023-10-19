@@ -6,16 +6,21 @@
     <title>AvaliaWeb/Login</title>
     <link rel="stylesheet" type="text/css" href="styles/login.css" />
 <body>
+    <div class="imglogin">
+        <img src="styles/imagens/download-removebg-preview.png" width="700px">
+    </div>
+    <div class="logo">
+        <img src="styles/imagens/logo.png">
+    </div>
     <div class="box">
         <form action="../Processos/testLogin.php" method="POST">
-            <fieldset>
                 <legend><b>Login</b></legend>
                 <br>
                 <div class="inputBox">
                     <input type="text" name="email" id="email" class="inputUser" autocomplete="off" required> 
                     <label for="email" class="labelInput">Email</label>
                 </div>
-                <br><br>
+                <br>
                 <div class="inputBox">
                     <input type="password" name="senha" id="senha" class="inputUser" required> 
                     <label for="senha" class="labelInput">Senha</label>
@@ -24,9 +29,10 @@
                 <div class="inputBox">
                     <p>Não possui uma conta?<a href="tela_cadastro.html" class="href"> Cadastre-se</p></a>
                 </div>
+                <br>
                 <input type="submit" name="submit" id="submit">
-            </fieldset>
         </form>
     </div>
+    <main></main>
 </body>
 </html>

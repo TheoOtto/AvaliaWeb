@@ -1,30 +1,70 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, #a8a1e3, #584ad9);
+    background-image: linear-gradient(to right, #000000, #584ad9);
+    /* background-image: url("imagens/Photo\ by\ Robert\ Katzki\ on\ Unsplash.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center center; */
 }
+/* 
+main {
+    background: url("imagens/fofo_plantas.jpeg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  } */
+
+.imglogin{
+    position: absolute;
+    top: 200px;
+    left: 55%;
+}
+
+.logo {
+    position: absolute;
+    top: -100px;
+    left: 7%;
+}
+
+/* @keyframes logoanimation{
+    from{
+        right: 0;
+    }
+    to{
+        right: 30%;
+    }
+} */
+
 .box{
     color: white;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5 );
+    padding: 30px;
     border-radius: 10px;
     width: 20%;
+    animation: boxanimation 2s;
+    right: 40%;
+    border: 2px outset #584ad9;
 }
-fieldset{
-    border: 3px solid #584ad9;
+
+@keyframes boxanimation{
+    from{
+        right: -110px;
+    }
+    to{
+        right: 40%;
+    }
+
 }
+
 legend{
-    border: 1px solid #584ad9;
     padding: 10px;
     text-align: center;
-    background-color: #584ad9;
-    border-radius: 8px;
 }
 .inputBox{
     position: relative;
+    font-size: 10px;
 }
 .inputUser{
     background: none;
@@ -33,7 +73,7 @@ legend{
     outline: none;
     color: white;
     font-size: 15px;
-    width: 100%;
+    width: 93%;
     letter-spacing: 1px;
 }
 .labelInput{
@@ -45,21 +85,37 @@ legend{
 }
 .inputUser:focus ~ .labelInput,
 .inputUser:valid ~.labelInput{
-    top: -20px;
-    font-size: 12px;
+    top: -10px;
+    font-size: 8px;
     color:#a8a1e3;
 }
 #submit{
-    background-image: linear-gradient(to right, #a8a1e3, #584ad9);
+    background-image: linear-gradient(to right, #1e1744, #584ad9);;
     width: 100%;
     border: none;
     padding: 15px;
     cursor: pointer;
     border-radius: 10px;
+    margin: 3px;
 }
 #submit:hover{
-    background-image: linear-gradient(to right, #9450af, #440255);
+    background-image: linear-gradient(to right, #0d0a1f, #3e339b);;
 }
 .href{
-    color: #d97ef5;
+    color: #6a47bb;
+}
+
+@media  only screen and (max-width: 1370px){
+    .quadrado{
+        position: absolute;
+        top: 10%;
+        left: 55%;
+        width: 10vw;
+    }
+
+    .logo {
+        position: absolute;
+        top: -30%;
+        left: -5%;
+    }
 }

@@ -2,6 +2,52 @@
     margin: 0;
     padding: 0;
   }
+
+  .box{
+    color: white;
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5 );
+    padding: 15px;
+    border-radius: 10px;
+    width: 20%;
+    animation: boxanimation 2s;
+    right: 50%;
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+#submit{
+    background-color: cadetblue;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+#submit:hover{
+    background-color: rgb(76, 127, 128);
+}
+
+b{
+    color: goldenrod;
+}
   
   a {
     color: #fff !important;
@@ -18,13 +64,12 @@
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    text-decoration: none;
-    padding: 0px 0px 0px 10px;
+    text-decoration: none !important
   }
   
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
@@ -67,7 +112,7 @@
       position: absolute;
       top: 8vh;
       right: 0;
-      width: 12vw;
+      width: 15vw;
       height: 92vh;
       background: #23232e;
       flex-direction: column;
@@ -123,16 +168,13 @@
     padding: 0px 20px 0px 0px;
   }
 
-  .card-group{
-    width: 30vw;
-    top: 20%;
-    left: 30%;
-  }
-
   .card{
-    top: 20%;
-    width: 25%;
-    left: 10%;
+    width: 30vw;
+    left: 50%;
   }
 
-  
+ 
+/* input[type="file"] {
+  display: none;
+} */
+

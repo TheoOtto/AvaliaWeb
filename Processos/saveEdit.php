@@ -11,11 +11,9 @@ include('../Classes/User.php');
         $telefone = $_POST['telefone'];
         $sexo = $_POST['sexo'];
         $data_nasc = $_POST['data_nasc'];
-        $estado = $_POST['estado'];
-        $cidade = $_POST['cidade'];
         
         $instancia = new User();
-        $instancia->SaveEdit($id,$nome,$email,$senha,$telefone,$sexo,$data_nasc,$estado,$cidade,$sqlUpdate,$result);
+        $instancia->SaveEdit($id,$nome,$email,$senha,$telefone,$sexo,$data_nasc,$sqlUpdate,$result);
     }
     header('Location: ../Telas/confirm_update.html');
 

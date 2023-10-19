@@ -4,21 +4,16 @@ include('Conexao.php');
 
 class User
 {
-
-    private $nome;
-    private $email;
-    private $senha;
     private $conn;
-    private $logado;
 
     function __construct()
     {
         $this->conn = new Conexao();
     }
    
-    function Cadastrar($nome,$email,$senha,$telefone,$sexo,$data_nasc,$estado,$cidade){
-        $result = mysqli_query($this->conn->getConnection(), "INSERT INTO usuarios(nome,email,senha,telefone,sexo,data_nasc,cidade,estado)
-        VALUES ('$nome','$email','$senha','$telefone','$sexo', '$data_nasc','$estado','$cidade')");
+    function Cadastrar($nome,$email,$senha,$telefone,$sexo,$data_nasc){
+        $result = mysqli_query($this->conn->getConnection(), "INSERT INTO usuarios(nome,email,senha,telefone,sexo,data_nasc)
+        VALUES ('$nome','$email','$senha','$telefone','$sexo', '$data_nasc')");
     }
 
     function Logar($email, $senha){
@@ -42,6 +37,23 @@ class User
         
     }
 
+    function Postar($nomePost,$titulo, $descricao){
+        $sql = "INSERT INTO postar(nome,titulo, descricao)
+        VALUES ($nomePost,$titulo,$descricao)";
+        $result = mysqli_query($this->conn->getConnection(), $sql);
+
+        // $imageData = file_get_contents($image['tmp_name']);
+        // $imageType = $image['type'];
+    }
+
+    function Post(){
+        $sqlSelect = "SELECT * FROM postar";
+        $result = mysqli_query($this->conn->getConnection(), $sqlSelect);
+
+
+        
+    }
+
     function Deletar($logado){
         $delet = mysqli_query($this->conn->getConnection(), "DELETE FROM usuarios WHERE email = '$logado'");
     }
@@ -59,10 +71,10 @@ class User
         $result = $conecta->getConnection()->query($sqlSelect);
     }
 
-    function SaveEdit($id,$nome,$email,$senha,$telefone,$sexo,$data_nasc,$estado,$cidade,$sqlUpdate){
+    function SaveEdit($id,$nome,$email,$senha,$telefone,$sexo,$data_nasc,$sqlUpdate){
         $conecta = new Conexao();
         $sqlUpdate = "UPDATE usuarios SET nome = '$nome', email = '$email', senha = '$senha', telefone = '$telefone',
-        sexo = '$sexo', data_nasc = '$data_nasc', estado = '$estado', cidade = '$cidade' WHERE id = '$id'";
+        sexo = '$sexo', data_nasc = '$data_nasc' WHERE id = '$id'";
         $result = $conecta->getConnection()->query($sqlUpdate);
     }
 
@@ -80,8 +92,6 @@ class User
           echo "<td>".$dados['telefone']."</td>";
           echo "<td>".$dados['sexo']."</td>";
           echo "<td>".$dados['data_nasc']."</td>";
-          echo "<td>".$dados['estado']."</td>";
-          echo "<td>".$dados['cidade']."</td>";
           echo "<td>
                   <a class = 'btn btn-sm  btn-primary' href='../Telas/dados_edit.php?id=$dados[id]'>
                     <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>
@@ -91,6 +101,6 @@ class User
                   </a>
                 </td>";
           echo "</try>";
-              }
+        }
     }
 }
