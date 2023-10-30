@@ -68,20 +68,50 @@
       </div>
     </header>
     <main>
-
-      <div class="card">
-        <div class="card-header">
-          <?php echo $nome?>
+      <a href="tela_post.php">
+        <button class="plus"> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+          </svg>
+        </button>
+      </a>
+      <div class="box">
+        <div class="img"></div>
+        <div class="card">
+          <div class="card-header">
+            <?php echo $nome?>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p><?php echo $titulo?></p>
+              <footer class="blockquote-footer"><?php echo $descricao?></footer>
+            </blockquote>
+          </div>
+          <hr>
+          <div class="stars">
+            <form action="../Processos/banco_rating.php" method="POST">
+              <span class="star-rating star-5">
+                <input type="radio" name="rating" id="1" value="1"><i></i>
+                <input type="radio" name="rating" id="2" value="2"><i></i>
+                <input type="radio" name="rating" id="3" value="3"><i></i>
+                <input type="radio" name="rating" id="4" value="4"><i></i>
+                <input type="radio" name="rating" id="5" value="5"><i></i>
+              </span>
+          </div>
         </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p><?php echo $titulo?></p>
-            <footer class="blockquote-footer"><?php echo $descricao?></footer>
-          </blockquote>
+        <br>
+        <div class="card">
+          <div class="card-header">
+            Comentários
+          </div>
+          <div class="card-body">
+              <input type="text" name="coments" id="coments" class="inputUser" autocomplete="off">
+              <input type="submit" name="submit" id="submit">
+            </form>
+          </div>
         </div>
       </div>
 
     </main>
-    <script src="../Processos/mobile-navbar.js"></script>
   </body>
 </html>

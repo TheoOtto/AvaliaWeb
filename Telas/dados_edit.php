@@ -39,7 +39,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +81,7 @@
                     <input type="radio" id="outro" name="sexo" value="outro" <?php echo ($sexo == 'outro') ? 'checked' : ''?> required>
                     <label for="outro">Outro</label>
                     <br><br>
-                    <label for="data_nasc"><b>Data de Nascimento:</b></label>
+                    <label for="data_nasc"><p>Data de Nascimento:</p></label>
                     <input type="date"  name="data_nasc" id="data_nasc" value="<?php echo $data_nasc;?>" required>
                 </div>
                 <br><br>

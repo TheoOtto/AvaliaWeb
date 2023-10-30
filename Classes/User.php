@@ -38,20 +38,19 @@ class User
     }
 
     function Postar($nomePost,$titulo, $descricao){
-        $sql = "INSERT INTO postar(nome,titulo, descricao)
-        VALUES ($nomePost,$titulo,$descricao)";
-        $result = mysqli_query($this->conn->getConnection(), $sql);
+        // $sql = "INSERT INTO postar(nome,titulo, descricao)
+        // VALUES ('$nomePost','$titulo','$descricao')";
+        // $result = mysqli_query($this->conn->getConnection(), $sql);
 
-        // $imageData = file_get_contents($image['tmp_name']);
-        // $imageType = $image['type'];
+        $result = mysqli_query($this->conn->getConnection(), "INSERT INTO postar(nome,titulo, descricao)
+        VALUES ('$nomePost','$titulo','$descricao')");
+
     }
 
     function Post(){
         $sqlSelect = "SELECT * FROM postar";
         $result = mysqli_query($this->conn->getConnection(), $sqlSelect);
-
-
-        
+    
     }
 
     function Deletar($logado){
@@ -102,5 +101,10 @@ class User
                 </td>";
           echo "</try>";
         }
+    }
+
+    function Rating($rating,$coments){
+        $result = mysqli_query($this->conn->getConnection(), "INSERT INTO rating(rating,coments)
+        VALUES ('$rating','$coments')");
     }
 }

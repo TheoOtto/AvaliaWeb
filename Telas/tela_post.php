@@ -32,7 +32,7 @@ include_once('../Classes/User.php');
   <body>
     <header>
       <nav class="navbarcl">
-        <a class="logo">AvaliaWeb</a>
+      <a class="logo" href="tela_home.php">AvaliaWeb</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
@@ -48,8 +48,13 @@ include_once('../Classes/User.php');
       </div>
     </header>
     <main>
-        <h1>Poste Aqui</h1>
-        <br>
+        <a href="tela_home.php">
+          <button class="plus"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+          </button>
+        </a>
         <div class="box">
             <form action="../Processos/banco_post.php" method="post">
                 <b>Nome</b>
@@ -69,10 +74,7 @@ include_once('../Classes/User.php');
                 <div class="inputBox">
                     <input type="text" name="descricao" id="descricao" class="inputUser" autocomplete="off" required> 
                 </div>
-                <br><br>  
-                <!-- <label for="img" >Selecione uma imagem:</label>
-                <input class="form-input" type="file" name="img" accept="image/*" id="img">
-                <br> -->
+                <br><br>
                 <input type="submit" name="submit" id="submit">
             </form>
         </div>

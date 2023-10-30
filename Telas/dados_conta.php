@@ -32,7 +32,7 @@ include_once('../Classes/User.php');
   <body>
     <header>
       <nav class="navbarcl">
-        <a class="logo">AvaliaWeb</a>
+        <a class="logo" href="tela_home.php">AvaliaWeb</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
