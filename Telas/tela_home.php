@@ -111,7 +111,50 @@
           </div>
         </div>
       </div>
+      <div class="box2">
+        <div class="img"></div>
+        <div class="card">
+          <div class="card-header">
+            <?php echo $nome?>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p><?php echo $titulo?></p>
+              <footer class="blockquote-footer"><?php echo $descricao?></footer>
+            </blockquote>
+          </div>
+          <hr>
+          <div class="stars">
+            <form action="../Processos/banco_rating.php" method="POST">
+              <span class="star-rating star-5">
+                <input type="radio" name="rating" id="1" value="1"><i></i>
+                <input type="radio" name="rating" id="2" value="2"><i></i>
+                <input type="radio" name="rating" id="3" value="3"><i></i>
+                <input type="radio" name="rating" id="4" value="4"><i></i>
+                <input type="radio" name="rating" id="5" value="5"><i></i>
+              </span>
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div class="card-header">
+            Comentários
+          </div>
+          <div class="card-body">
+              <input type="text" name="coments" id="coments" class="inputUser" autocomplete="off">
+              <input type="submit" name="submit" id="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50" color="white  " fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+      </a>
 
+      <script src="../Processos/arrowup.js"></script>
     </main>
   </body>
 </html>

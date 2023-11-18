@@ -53,6 +53,7 @@ legend{
     font-size: 15px;
     width: 85%;
     letter-spacing: 1px;
+    padding: 0 0 0 8px;
 }
 .labelInput{
     position: absolute;
@@ -64,7 +65,7 @@ legend{
 .inputUser:focus ~ .labelInput,
 .inputUser:valid ~.labelInput{
     top: -10px;
-    font-size: 8px;
+    font-size: 10px;
     color:#a8a1e3;
 }
 #data_nasc{
